@@ -1,9 +1,6 @@
-name: Android build and Publish Debug APK
+name: Android build
 
-on:
-  push:
-    branches:
-      - master
+on: pull_request
 
 jobs:
   build:
@@ -11,22 +8,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: CheckOut Code
       - uses: actions/checkout@v1
 
-      - name: Set Up JDK 1.8
+      - name: Set Up JDK
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
 
-      -name: Make Gradle executable
-        run: chmod +x ./gradlew
+      - name: Run Tests
+        run: ./gradlew test
 
-      - name: Build with Gradle
-        run: ./gradlew build
-
-      - name: Build Debug APK
-        run: ./gradlew assembleRelease
-
-      - name: List artifact APK
-        run: ls -la
+      - name: Build Project
+        run: ./gradlew assemble
