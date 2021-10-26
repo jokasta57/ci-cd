@@ -40,8 +40,7 @@ class MainActivity : AppCompatActivity() {
 
             Toast.makeText(this, "Se registraron los artículos", Toast.LENGTH_SHORT).show()
 
-            //comentario que debo borrar, para agregar
-            var borrarme: Int = 10
+
 
         }
 
