@@ -40,8 +40,8 @@ class MainActivity : AppCompatActivity() {
 
             Toast.makeText(this, "Se registraron los artículos", Toast.LENGTH_SHORT).show()
 
-            //comentario que debo borrar, para agregar
-            var borrarme: Int = 10
+            //comentarios que se deben borrar, solo estoy haciendo una nueva branch, para usar un Action de Github
+
 
         }
 
